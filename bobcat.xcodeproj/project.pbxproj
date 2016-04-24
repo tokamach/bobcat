@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E23477E41CCD23A000E38821 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E23477E31CCD23A000E38821 /* README.md */; };
 		E2C057E91CCCEC58006763DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C057E81CCCEC58006763DB /* AppDelegate.swift */; };
 		E2C057EB1CCCEC58006763DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C057EA1CCCEC58006763DB /* ViewController.swift */; };
 		E2C057ED1CCCEC58006763DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2C057EC1CCCEC58006763DB /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E23477E31CCD23A000E38821 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E2C057E51CCCEC58006763DB /* bobcat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bobcat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2C057E81CCCEC58006763DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2C057EA1CCCEC58006763DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		E2C057E71CCCEC58006763DB /* bobcat */ = {
 			isa = PBXGroup;
 			children = (
+				E23477E31CCD23A000E38821 /* README.md */,
 				E2C057FB1CCD1B8D006763DB /* bobcat_icon.png */,
 				E2C057FC1CCD1B8D006763DB /* bobcat_icon@2x.png */,
 				E2C057E81CCCEC58006763DB /* AppDelegate.swift */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E23477E41CCD23A000E38821 /* README.md in Sources */,
 				E2C057EB1CCCEC58006763DB /* ViewController.swift in Sources */,
 				E2C057E91CCCEC58006763DB /* AppDelegate.swift in Sources */,
 			);
@@ -285,6 +289,7 @@
 				E2C057F61CCCEC58006763DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
