@@ -8,8 +8,9 @@
 
 import Cocoa
 import WebKit
+import VideoToolbox
 
-class ViewController: NSViewController, WKNavigationDelegate, NSTextFieldDelegate {
+class ViewController: NSViewController, WKNavigationDelegate, WKUIDelegate, NSTextFieldDelegate {
 
     @IBOutlet weak var mainView: WebView!
     @IBOutlet weak var urlBox: NSTextField!
@@ -29,6 +30,7 @@ class ViewController: NSViewController, WKNavigationDelegate, NSTextFieldDelegat
         
         mainView.mainFrame.loadRequest(request)
         
+        
         //self.view.menu
     }
     
@@ -38,6 +40,12 @@ class ViewController: NSViewController, WKNavigationDelegate, NSTextFieldDelegat
         self.view.window?.titleVisibility = NSWindowTitleVisibility.Hidden
         self.view.window?.titlebarAppearsTransparent = true
         self.view.window?.styleMask |= NSFullSizeContentViewWindowMask
+    }
+    
+    //Delegate I think
+    func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!)
+    {
+        
     }
 
     @IBAction func textFieldChanged(sender: NSTextField)
