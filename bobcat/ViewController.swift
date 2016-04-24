@@ -13,7 +13,6 @@ class ViewController: NSViewController, WKNavigationDelegate, NSTextFieldDelegat
 
     @IBOutlet weak var mainView: WebView!
     @IBOutlet weak var urlBox: NSTextField!
-    @IBOutlet weak var goButton: NSButton!
     
     func loadPage(urlString: String)
     {
