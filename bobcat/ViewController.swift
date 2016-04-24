@@ -10,11 +10,13 @@ import Cocoa
 import WebKit
 import VideoToolbox
 
-class ViewController: NSViewController, WKNavigationDelegate, WKUIDelegate, NSTextFieldDelegate {
+class ViewController: NSViewController, WKNavigationDelegate, WebFrameLoadDelegate
+{
 
     @IBOutlet weak var mainView: WebView!
     @IBOutlet weak var urlBox: NSTextField!
     
+    // Should parse for http and www
     func loadPage(urlString: String)
     {
         mainView.mainFrame.loadRequest(NSURLRequest(URL: NSURL(string: ("http://" + urlBox.stringValue))!))
@@ -22,16 +24,13 @@ class ViewController: NSViewController, WKNavigationDelegate, WKUIDelegate, NSTe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        urlBox.stringValue = "apple.com"
-        let url = NSURL(string: "https://www.apple.com")!
-        let request = NSURLRequest(URL: url)
-        
-        mainView.mainFrame.loadRequest(request)
-        
-        
-        //self.view.menu
+        mainView.frameLoadDelegate = self
+    }
+    
+    func webViewDidFinishLoadForFrame(frame: WebFrame!)
+    {
+        print("AGA")
+        loadPage("steam.com")
     }
     
     override func viewDidAppear() {
@@ -40,12 +39,6 @@ class ViewController: NSViewController, WKNavigationDelegate, WKUIDelegate, NSTe
         self.view.window?.titleVisibility = NSWindowTitleVisibility.Hidden
         self.view.window?.titlebarAppearsTransparent = true
         self.view.window?.styleMask |= NSFullSizeContentViewWindowMask
-    }
-    
-    //Delegate I think
-    func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!)
-    {
-        
     }
 
     @IBAction func textFieldChanged(sender: NSTextField)

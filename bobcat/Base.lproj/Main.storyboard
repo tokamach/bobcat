@@ -408,19 +408,19 @@
                                 </webPreferences>
                             </webView>
                             <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="spZ-11-wEg">
-                                <rect key="frame" x="279" y="578" width="442" height="22"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="center" usesSingleLineMode="YES" id="Ep3-BU-dQQ">
+                                <rect key="frame" x="281" y="578" width="438" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" focusRingType="none" alignment="center" usesSingleLineMode="YES" bezelStyle="round" id="Ep3-BU-dQQ">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" red="0.97662259615384617" green="0.97662259615384617" blue="0.97662259615384617" alpha="1" colorSpace="calibratedRGB"/>
                                 </textFieldCell>
                                 <accessibility description="URL Bar"/>
                                 <connections>
                                     <action selector="textFieldChanged:" target="XfG-lQ-9wD" id="waE-Bu-tP1"/>
                                 </connections>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fqR-bc-0T6">
-                                <rect key="frame" x="827" y="576" width="69" height="25"/>
+                            <button verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fqR-bc-0T6">
+                                <rect key="frame" x="931" y="576" width="69" height="25"/>
                                 <buttonCell key="cell" type="roundTextured" title="Forward" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XOH-0g-yYU">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -429,8 +429,8 @@
                                     <action selector="goForward:" target="gOh-Lk-dhr" id="c7j-SY-HGz"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZAO-xc-5c5">
-                                <rect key="frame" x="749" y="576" width="70" height="25"/>
+                            <button verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZAO-xc-5c5">
+                                <rect key="frame" x="853" y="576" width="70" height="25"/>
                                 <buttonCell key="cell" type="roundTextured" title="Back" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CR5-uD-cgz">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -442,6 +442,7 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="spZ-11-wEg" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="2tm-yb-x8e"/>
+                            <constraint firstItem="fqR-bc-0T6" firstAttribute="leading" secondItem="ZAO-xc-5c5" secondAttribute="trailing" constant="8" id="46C-QF-jYL"/>
                             <constraint firstAttribute="bottom" secondItem="gOh-Lk-dhr" secondAttribute="bottom" id="9Pv-Fn-OW8"/>
                             <constraint firstAttribute="trailing" secondItem="spZ-11-wEg" secondAttribute="trailing" constant="281" id="FZR-e2-mYw"/>
                             <constraint firstItem="spZ-11-wEg" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="281" id="Q6R-2m-BfM"/>
@@ -449,6 +450,7 @@
                             <constraint firstItem="gOh-Lk-dhr" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="oj1-RW-n0W"/>
                             <constraint firstItem="gOh-Lk-dhr" firstAttribute="top" secondItem="spZ-11-wEg" secondAttribute="bottom" id="uIZ-8o-Bm3"/>
                             <constraint firstItem="gOh-Lk-dhr" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="22" id="z53-29-IUr"/>
+                            <constraint firstAttribute="trailing" secondItem="fqR-bc-0T6" secondAttribute="trailing" id="zbJ-2v-oig"/>
                         </constraints>
                     </view>
                     <connections>
