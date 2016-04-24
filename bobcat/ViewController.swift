@@ -7,21 +7,43 @@
 //
 
 import Cocoa
+import WebKit
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, WKNavigationDelegate, NSTextFieldDelegate {
 
+    @IBOutlet weak var mainView: WebView!
+    @IBOutlet weak var urlBox: NSTextField!
+    @IBOutlet weak var goButton: NSButton!
+    
+    func loadPage(urlString: String)
+    {
+        mainView.mainFrame.loadRequest(NSURLRequest(URL: NSURL(string: ("http://" + urlBox.stringValue))!))
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        urlBox.stringValue = "apple.com"
+        let url = NSURL(string: "https://www.apple.com")!
+        let request = NSURLRequest(URL: url)
+        
+        mainView.mainFrame.loadRequest(request)
+        
+        //self.view.menu
+    }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        
+        self.view.window?.titleVisibility = NSWindowTitleVisibility.Hidden
+        self.view.window?.titlebarAppearsTransparent = true
+        self.view.window?.styleMask |= NSFullSizeContentViewWindowMask
     }
 
-    override var representedObject: AnyObject? {
-        didSet {
-        // Update the view, if already loaded.
-        }
+    @IBAction func textFieldChanged(sender: NSTextField)
+    {
+        loadPage(sender.stringValue)
     }
-
-
 }
 

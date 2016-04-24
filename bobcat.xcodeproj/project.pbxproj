@@ -11,6 +11,8 @@
 		E2C057EB1CCCEC58006763DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C057EA1CCCEC58006763DB /* ViewController.swift */; };
 		E2C057ED1CCCEC58006763DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2C057EC1CCCEC58006763DB /* Assets.xcassets */; };
 		E2C057F01CCCEC58006763DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C057EE1CCCEC58006763DB /* Main.storyboard */; };
+		E2C057F81CCD19A8006763DB /* bobcat_icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E2C057F71CCD19A8006763DB /* bobcat_icon.jpg */; };
+		E2C057FA1CCD19FC006763DB /* bobcat_icon@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E2C057F91CCD19FC006763DB /* bobcat_icon@2x.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		E2C057EC1CCCEC58006763DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2C057EF1CCCEC58006763DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E2C057F11CCCEC58006763DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2C057F71CCD19A8006763DB /* bobcat_icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bobcat_icon.jpg; sourceTree = "<group>"; };
+		E2C057F91CCD19FC006763DB /* bobcat_icon@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bobcat_icon@2x.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,8 @@
 		E2C057E71CCCEC58006763DB /* bobcat */ = {
 			isa = PBXGroup;
 			children = (
+				E2C057F91CCD19FC006763DB /* bobcat_icon@2x.jpg */,
+				E2C057F71CCD19A8006763DB /* bobcat_icon.jpg */,
 				E2C057E81CCCEC58006763DB /* AppDelegate.swift */,
 				E2C057EA1CCCEC58006763DB /* ViewController.swift */,
 				E2C057EC1CCCEC58006763DB /* Assets.xcassets */,
@@ -121,6 +127,8 @@
 			files = (
 				E2C057ED1CCCEC58006763DB /* Assets.xcassets in Resources */,
 				E2C057F01CCCEC58006763DB /* Main.storyboard in Resources */,
+				E2C057FA1CCD19FC006763DB /* bobcat_icon@2x.jpg in Resources */,
+				E2C057F81CCD19A8006763DB /* bobcat_icon.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +247,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = bobcat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = tokamach.bobcat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -251,6 +260,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = bobcat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = tokamach.bobcat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
