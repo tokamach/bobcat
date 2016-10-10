@@ -17,9 +17,9 @@ class ViewController: NSViewController, WKNavigationDelegate, WebFrameLoadDelega
     @IBOutlet weak var urlBox: NSTextField!
     
     // Should parse for http and www
-    func loadPage(urlString: String)
+    func loadPage(_ urlString: String)
     {
-        mainView.mainFrame.loadRequest(NSURLRequest(URL: NSURL(string: ("http://" + urlBox.stringValue))!))
+        mainView.mainFrame.load(URLRequest(url: URL(string: ("http://" + urlBox.stringValue))!))
     }
     
     override func viewDidLoad() {
@@ -27,21 +27,21 @@ class ViewController: NSViewController, WKNavigationDelegate, WebFrameLoadDelega
         mainView.frameLoadDelegate = self
     }
     
-    func webViewDidFinishLoadForFrame(frame: WebFrame!)
+    func webViewDidFinishLoadForFrame(_ frame: WebFrame!)
     {
         print("AGA")
-        loadPage("steam.com")
+        loadPage("google.com")
     }
     
     override func viewDidAppear() {
         super.viewDidAppear()
         
-        self.view.window?.titleVisibility = NSWindowTitleVisibility.Hidden
+        self.view.window?.titleVisibility = NSWindowTitleVisibility.hidden
         self.view.window?.titlebarAppearsTransparent = true
-        self.view.window?.styleMask |= NSFullSizeContentViewWindowMask
+//        self.view.window?.styleMask |= NSFullSizeContentViewWindowMask
     }
 
-    @IBAction func textFieldChanged(sender: NSTextField)
+    @IBAction func textFieldChanged(_ sender: NSTextField)
     {
         loadPage(sender.stringValue)
     }
