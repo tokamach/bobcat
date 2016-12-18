@@ -17,12 +17,12 @@ class Regex
     init(_ pattern: String)
     {
         self.pattern = pattern
-        self.internalExpression = NSRegularExpression.withPattern(pattern, options: .caseInsensitive)
+        self.internalExpression = NSRegularExpression(pattern: pattern, options: .caseInsensitive)
     }
     
     func test(input: String) -> Bool
     {
-        let matches = internalExpression.matchesInString(input, options: nil, range: NSMakeRange(0, input.characters.count))
+        let matches = internalExpression.matches(in: input, options: nil, range: NSMakeRange(0, input.characters.count))
         return matches.count > 0
     }
 }
