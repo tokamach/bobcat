@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="16A313a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="16B2338c" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11198.2"/>
@@ -419,16 +419,6 @@
                                     <action selector="textFieldChanged:" target="XfG-lQ-9wD" id="waE-Bu-tP1"/>
                                 </connections>
                             </textField>
-                            <button verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZAO-xc-5c5">
-                                <rect key="frame" x="926" y="576" width="23" height="25"/>
-                                <buttonCell key="cell" type="roundTextured" title="&lt;" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CR5-uD-cgz">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="goBack:" target="gOh-Lk-dhr" id="utL-Nh-G6B"/>
-                                </connections>
-                            </button>
                             <button verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fqR-bc-0T6">
                                 <rect key="frame" x="957" y="576" width="23" height="25"/>
                                 <buttonCell key="cell" type="roundTextured" title="&gt;" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XOH-0g-yYU">
@@ -439,14 +429,25 @@
                                     <action selector="goForward:" target="gOh-Lk-dhr" id="c7j-SY-HGz"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d4M-C6-7dV">
+                                <rect key="frame" x="920" y="572" width="35" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="3pg-QZ-NxD"/>
+                                    <constraint firstAttribute="width" constant="22" id="Yih-lS-SSb"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="&lt;" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Nrd-vR-gKA">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="spZ-11-wEg" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="2tm-yb-x8e"/>
-                            <constraint firstItem="fqR-bc-0T6" firstAttribute="leading" secondItem="ZAO-xc-5c5" secondAttribute="trailing" constant="8" id="46C-QF-jYL"/>
                             <constraint firstAttribute="bottom" secondItem="gOh-Lk-dhr" secondAttribute="bottom" id="9Pv-Fn-OW8"/>
                             <constraint firstAttribute="trailing" secondItem="spZ-11-wEg" secondAttribute="trailing" constant="281" id="FZR-e2-mYw"/>
                             <constraint firstItem="spZ-11-wEg" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="281" id="Q6R-2m-BfM"/>
                             <constraint firstAttribute="trailing" secondItem="gOh-Lk-dhr" secondAttribute="trailing" id="byK-Y8-13N"/>
+                            <constraint firstItem="fqR-bc-0T6" firstAttribute="leading" secondItem="d4M-C6-7dV" secondAttribute="trailing" constant="10" id="iwL-MA-qC0"/>
                             <constraint firstItem="gOh-Lk-dhr" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="oj1-RW-n0W"/>
                             <constraint firstItem="gOh-Lk-dhr" firstAttribute="top" secondItem="spZ-11-wEg" secondAttribute="bottom" id="uIZ-8o-Bm3"/>
                             <constraint firstItem="gOh-Lk-dhr" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="22" id="z53-29-IUr"/>

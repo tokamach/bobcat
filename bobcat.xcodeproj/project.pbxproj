@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E23477E41CCD23A000E38821 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E23477E31CCD23A000E38821 /* README.md */; };
+		E23E0BA21E0678D80053BB13 /* URLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23E0BA11E0678D80053BB13 /* URLParser.swift */; };
 		E2C057E91CCCEC58006763DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C057E81CCCEC58006763DB /* AppDelegate.swift */; };
 		E2C057EB1CCCEC58006763DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C057EA1CCCEC58006763DB /* ViewController.swift */; };
 		E2C057ED1CCCEC58006763DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2C057EC1CCCEC58006763DB /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		E23477E31CCD23A000E38821 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E23E0BA11E0678D80053BB13 /* URLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParser.swift; sourceTree = "<group>"; };
 		E2C057E51CCCEC58006763DB /* bobcat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bobcat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2C057E81CCCEC58006763DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2C057EA1CCCEC58006763DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				E2C057FC1CCD1B8D006763DB /* bobcat_icon@2x.png */,
 				E2C057E81CCCEC58006763DB /* AppDelegate.swift */,
 				E2C057EA1CCCEC58006763DB /* ViewController.swift */,
+				E23E0BA11E0678D80053BB13 /* URLParser.swift */,
 				E2C057EC1CCCEC58006763DB /* Assets.xcassets */,
 				E2C057EE1CCCEC58006763DB /* Main.storyboard */,
 				E2C057F11CCCEC58006763DB /* Info.plist */,
@@ -145,6 +148,7 @@
 			files = (
 				E23477E41CCD23A000E38821 /* README.md in Sources */,
 				E2C057EB1CCCEC58006763DB /* ViewController.swift in Sources */,
+				E23E0BA21E0678D80053BB13 /* URLParser.swift in Sources */,
 				E2C057E91CCCEC58006763DB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
