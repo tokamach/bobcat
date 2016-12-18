@@ -12,18 +12,24 @@ import Foundation
 class Regex
 {
     var internalExpression: NSRegularExpression
-    let pattern: String
+    var pattern: String
     
     init(_ pattern: String)
     {
         self.pattern = pattern
-        try! self.internalExpression = NSRegularExpression(pattern: pattern, options: .caseInsensitive)
+        if(pattern.isEmpty)
+        {
+            self.pattern = " "
+        }
+        try! self.internalExpression = NSRegularExpression(pattern: self.pattern, options: .caseInsensitive)
     }
     
     func test(input: String) -> Bool
     {
-        let matches = internalExpression.matches(in: input, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, input.characters.count))
-        return matches.count > 0
+        let matches = internalExpression.matches(in: input,
+                                                 options: NSRegularExpression.MatchingOptions(rawValue: 0),
+                                                 range: NSMakeRange(0, input.characters.count))
+        return (matches.count > 0)
     }
 }
 
@@ -32,9 +38,9 @@ class URLParser
     public func parseURL(inputURL: String) -> String
     {
         let urlRegex = Regex(inputURL)
-        if(urlRegex.test(input: "https://*"))
+        if(urlRegex.test(input: "http*"))
         {
-            print("aga")
+            exit(-1)
         }
         
         return inputURL

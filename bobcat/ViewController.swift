@@ -8,7 +8,6 @@
 
 import Cocoa
 import WebKit
-import VideoToolbox
 
 class ViewController: NSViewController, WKNavigationDelegate, WebFrameLoadDelegate
 {
@@ -22,7 +21,7 @@ class ViewController: NSViewController, WKNavigationDelegate, WebFrameLoadDelega
         var urlString = urlString
         let parser = URLParser()
         urlString = parser.parseURL(inputURL: urlString)
-        mainView.mainFrame.load(URLRequest(url: URL(string: ("http://" + urlBox.stringValue))!))
+        mainView.mainFrame.load(URLRequest(url: URL(string: (urlString))!))
     }
     
     override func viewDidLoad() {
@@ -32,8 +31,7 @@ class ViewController: NSViewController, WKNavigationDelegate, WebFrameLoadDelega
     
     func webViewDidFinishLoadForFrame(_ frame: WebFrame!)
     {
-        print("AGA")
-        loadPage("google.com")
+//        loadPage("file:///Users/tom/code/index.html")
     }
     
     override func viewDidAppear() {
