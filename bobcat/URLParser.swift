@@ -18,7 +18,6 @@ class Regex
     {
         self.pattern = pattern
         try! self.internalExpression = NSRegularExpression(pattern: pattern, options: .caseInsensitive)
-        
     }
     
     func test(input: String) -> Bool

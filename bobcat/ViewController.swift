@@ -19,6 +19,9 @@ class ViewController: NSViewController, WKNavigationDelegate, WebFrameLoadDelega
     // Should parse for http and www
     func loadPage(_ urlString: String)
     {
+        var urlString = urlString
+        let parser = URLParser()
+        urlString = parser.parseURL(inputURL: urlString)
         mainView.mainFrame.load(URLRequest(url: URL(string: ("http://" + urlBox.stringValue))!))
     }
     
@@ -38,7 +41,7 @@ class ViewController: NSViewController, WKNavigationDelegate, WebFrameLoadDelega
         
         self.view.window?.titleVisibility = NSWindowTitleVisibility.hidden
         self.view.window?.titlebarAppearsTransparent = true
-//        self.view.window?.styleMask |= NSFullSizeContentViewWindowMask
+        self.view.window?.styleMask.insert(.fullSizeContentView)
     }
 
     @IBAction func textFieldChanged(_ sender: NSTextField)
