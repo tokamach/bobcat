@@ -17,12 +17,13 @@ class Regex
     init(_ pattern: String)
     {
         self.pattern = pattern
-        self.internalExpression = NSRegularExpression(pattern: pattern, options: .caseInsensitive)
+        try! self.internalExpression = NSRegularExpression(pattern: pattern, options: .caseInsensitive)
+        
     }
     
     func test(input: String) -> Bool
     {
-        let matches = internalExpression.matches(in: input, options: nil, range: NSMakeRange(0, input.characters.count))
+        let matches = internalExpression.matches(in: input, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, input.characters.count))
         return matches.count > 0
     }
 }
@@ -37,5 +38,6 @@ class URLParser
             print("aga")
         }
         
+        return inputURL
     }
 }
